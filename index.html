@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Human Motion with Temporally Conditional Mamba">
+  <meta name="keywords" content="Human motion, Mamba, Temporal conditioning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="./static/images/openad.jpeg"/>
+  <link rel="image_src" href="./static/images/logo.png">
+  <link rel="icon"
+        type="image/x-icon"
+        href="./static/images/logo"/>
+
+  <title>Learning Human Motion with Temporally Conditional Mamba</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EDF010G6PN');
+
+
+  </script>
+
+  <script type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title">
+          Learning Human Motion with Temporally Conditional Mamba
+        </h1>
+
+        <div class="has-text-centered">
+          <img style="width: 25%;" src="./static/images/logo.png">
+        </div>
+
+        <!-- <br> -->
+        <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=F5Fr2ysAAAAJ&hl=vi">Quang Nguyen</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=t6RXOWgAAAAJ&hl=vi">Tri Le</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=unbPvWAAAAAJ&hl=zh-CN">Baoru Huang</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?hl=th&user=qyExc4QAAAAJ&view_op=list_works">Minh Nhat Vu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><br>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=8ck0k_UAAAAJ&hl=en">Ngan Le</a><sup>4</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://sites.google.com/tdtu.edu.vn/vongocthieu">Thieu Vo</a><sup>5</sup>
+          </span>
+          <span class="author-block">
+            <a href="https://www.csc.liv.ac.uk/~anguyen/">Anh Nguyen</a><sup>2</sup>
+          </span>
+        </div>
+        <br>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup>1</sup>FPT Software AI Center</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>2</sup>University of Liverpool</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>3</sup>TU Wien</span>&nbsp;&nbsp;<br>
+          <span class="author-block"><sup>4</sup>University of Arkansas</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>5</sup>National University of Singapore</span>&nbsp;&nbsp;
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="https://github.com/Fsoft-AIC/TCM" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+
+            <span class="link-block">
+              <a href="http://arxiv.org/abs/2510.12573" target="_blank"
+                 class="button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning human motion based on a time-dependent input signal presents a
+            challenging yet impactful task with various applications. The goal of this task
+            is to generate or estimate human movement that consistently reflects the
+            temporal patterns of conditioning inputs. Existing methods typically rely on
+            cross-attention mechanisms to fuse the condition with motion. However, this
+            approach primarily captures global interactions and struggles to maintain
+            step-by-step temporal alignment. To address this limitation, we introduce
+            Temporally Conditional Mamba, a new mamba-based model for human motion
+            generation. Our approach integrates conditional information into the recurrent
+            dynamics of the Mamba block, enabling better temporally aligned motion. To
+            validate the effectiveness of our method, we evaluate it on a variety of human
+            motion tasks. Extensive experiments demonstrate that our model significantly
+            improves temporal alignment, motion realism, and condition consistency over
+            state-of-the-art approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      </div>
+    </div>
+      <div class="columns is-centered has-text-centered">
+        <video id="teaser" autoplay controls muted loop playsinline width="50%" height="100%">
+          <source src="./static/videos/TCM_ready.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-centered">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>Comming soon...
+  </code></pre>
+  </div>
+</section>
+
+
+<section class="section" id="acknowledgements">
+  <div class="container content is-max-desktop">
+    <h2 class="title">Acknowledgements</h2>
+    <p>We borrow the page template from <a href="https://hypernerf.github.io/">HyperNeRF</a>. Special thanks to them!
+  </div>
+</section>
+
+<script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+</html>
